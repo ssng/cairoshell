@@ -450,7 +450,9 @@ namespace CairoDesktop
         #region Startup checks
         private void checkUpdateConfig()
         {
-            chkEnableAutoUpdates.IsChecked = _applicationUpdateService.AutomaticUpdatesEnabled;
+            // SSH disable auto updates
+            //chkEnableAutoUpdates.IsChecked = _applicationUpdateService.AutomaticUpdatesEnabled;
+            chkEnableAutoUpdates.IsChecked = false;
         }
 
         private void checkTrayStatus()
@@ -503,6 +505,8 @@ namespace CairoDesktop
 
         private void EnableAutoUpdates_Click(object sender, RoutedEventArgs e)
         {
+            // SSH disable auto updates setting
+            return;
             if (chkEnableAutoUpdates.IsChecked != null)
             {
                 _applicationUpdateService.AutomaticUpdatesEnabled = (bool)chkEnableAutoUpdates.IsChecked;

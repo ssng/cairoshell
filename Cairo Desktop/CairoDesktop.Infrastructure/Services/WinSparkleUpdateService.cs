@@ -33,7 +33,8 @@ namespace CairoDesktop.Infrastructure.Services
 
                 WinSparkle.win_sparkle_set_can_shutdown_callback(_canShutdownDelegate);
                 WinSparkle.win_sparkle_set_shutdown_request_callback(_shutdownDelegate);
-                WinSparkle.win_sparkle_init();
+                // SSH disable auto updates
+                //WinSparkle.win_sparkle_init();
             }
             catch (Exception e)
             {
@@ -45,6 +46,8 @@ namespace CairoDesktop.Infrastructure.Services
         {
             get
             {
+                // SSH disable auto updates
+                return false;
                 int result = 0;
                 try
                 {
@@ -60,6 +63,8 @@ namespace CairoDesktop.Infrastructure.Services
 
             set
             {
+                // SSH disable auto updates
+                return;
                 int intValue = Convert.ToInt32(value);
 
                 try
@@ -75,6 +80,8 @@ namespace CairoDesktop.Infrastructure.Services
 
         public void CheckForUpdates()
         {
+            // SSH disable auto updates
+            return;
             try
             {
                 WinSparkle.win_sparkle_check_update_with_ui();
