@@ -37,34 +37,34 @@
                     </MenuItem.Header>
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_AboutCairo)}"
                               Click="AboutCairo"
-                              Name="OpenAboutCairo" />
+                              Name="OpenAboutCairo" Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_CheckForUpdates)}"
                               Click="CheckForUpdates"
-                              Name="OpenCheckForUpdates" />
-                    <Separator />
-                    <MenuItem Header="{Binding Path=(l10n:DisplayString.sAppGrabber)}"
+                              Name="OpenCheckForUpdates" Visibility="Collapsed" />
+                    <Separator Visibility="Collapsed" />
+                    <MenuItem x:Name="miAppGrabber" Header="{Binding Path=(l10n:DisplayString.sAppGrabber)}"
                               Click="InitAppGrabberWindow" />
-                    <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_CairoSettings)}"
+                    <MenuItem x:Name="miCairoSettings" Header="{Binding Path=(l10n:DisplayString.sCairoMenu_CairoSettings)}"
                               Click="InitCairoSettingsWindow" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_WindowsControlPanel)}"
-                              Click="OpenControlPanel" />
+                              Click="OpenControlPanel" Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_WindowsSettings)}"
                               Visibility="Collapsed"
                               Name="miOpenUWPSettings"
                               Click="miOpenUWPSettings_Click" />
-                    <Separator />
+                    <Separator x:Name="miSeparatorOne" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_Run)}"
-                              Click="OpenRunWindow" />
+                              Click="OpenRunWindow" Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_TaskManager)}"
-                              Click="OpenTaskManager" />
-                    <Separator />
+                              Click="OpenTaskManager" Visibility="Collapsed" />
+                    <Separator x:Name="miSeparatorTwo" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_ExitCairo)}"
                               Name="miExitCairo"
                               Click="OpenCloseCairoBox" />
-                    <Separator />
+                    <Separator x:Name="miSeparatorThree" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_Sleep)}"
                               Name="miSleep"
-                              Click="SysSleep" />
+                              Click="SysSleep" Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_Hibernate)}"
                               Name="miHibernate"
                               Click="SysHibernate"
@@ -73,11 +73,11 @@
                               Click="OpenRebootBox" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_ShutDown)}"
                               Click="OpenShutDownBox" />
-                    <Separator />
+                    <Separator Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_Lock)}"
-                              Click="SysLock" />
+                              Click="SysLock" Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_LogOff)}"
-                              Click="OpenLogoffBox" />
+                              Click="OpenLogoffBox" Visibility="Collapsed" />
                 </MenuItem>
                 <MenuItem Header="{Binding Path=(l10n:DisplayString.sProgramsMenu)}"
                           Name="ProgramsMenu"
@@ -95,7 +95,7 @@
                 </MenuItem>
                 <MenuItem Name="PlacesMenu"
                           Header="{Binding Path=(l10n:DisplayString.sPlacesMenu)}"
-                          TextBlock.FontWeight="SemiBold">
+                          TextBlock.FontWeight="SemiBold" Visibility="Collapsed">
                     <MenuItem xmlns:s="clr-namespace:System;assembly=mscorlib"
                               Name="miUserName"
                               FontWeight="Bold"

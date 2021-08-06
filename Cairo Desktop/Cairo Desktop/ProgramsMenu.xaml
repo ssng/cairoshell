@@ -17,7 +17,8 @@
                                         Height="16"
                                         Width="16" />
                                 </MenuItem.Icon>
-                                <MenuItem.ContextMenu>
+                                <!-- SSH disable context menu -->
+                                <!--<MenuItem.ContextMenu>
                                     <ContextMenu Name="ctxProgramsItem" Opened="ctxProgramsItem_Opened">
                                         <MenuItem Header="{Binding Path=(l10n:DisplayString.sInterface_Open)}" Click="programsMenu_Open" />
                                         <MenuItem Header="{Binding Path=(l10n:DisplayString.sInterface_OpenAsAdministrator)}" Click="programsMenu_OpenAsAdmin" />
@@ -33,7 +34,7 @@
                                         <Separator />
                                         <MenuItem Header="{Binding Path=(l10n:DisplayString.sInterface_Properties)}" Click="programsMenu_Properties" />
                                     </ContextMenu>
-                                </MenuItem.ContextMenu>
+                                </MenuItem.ContextMenu>-->
                                 <MenuItem.Header>
                                     <TextBlock Text="{Binding Path=Name}" Name="lblProgramName" TextTrimming="CharacterEllipsis" Width="191" />
                                 </MenuItem.Header>
@@ -79,8 +80,8 @@
                                               IsItemsHost="True"
                                               Background="Transparent" />
                                     <StackPanel Orientation="Vertical" DockPanel.Dock="Bottom" Margin="0,12,0,3" VerticalAlignment="Bottom">
-                                        <Button Style="{StaticResource ProgramsMenuButton}" Name="btnAppGrabber" Click="btnAppGrabber_Click" Content="{Binding Path=(l10n:DisplayString.sAppGrabber)}" />
-                                        <Button Style="{StaticResource ProgramsMenuButton}" Name="btnUninstallApps" Click="btnUninstallApps_Click" Content="{Binding Path=(l10n:DisplayString.sProgramsMenu_UninstallAProgram)}" />
+                                        <Button Style="{StaticResource ProgramsMenuButton}" Name="btnAppGrabber" Click="btnAppGrabber_Click" Content="{Binding Path=(l10n:DisplayString.sAppGrabber)}" Visibility="Collapsed" />
+                                        <Button Style="{StaticResource ProgramsMenuButton}" Name="btnUninstallApps" Click="btnUninstallApps_Click" Content="{Binding Path=(l10n:DisplayString.sProgramsMenu_UninstallAProgram)}" Visibility="Collapsed" />
                                     </StackPanel>
                                 </DockPanel>
                                 <Border x:Name="Border"

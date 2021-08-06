@@ -35,12 +35,12 @@
         <Button.ContextMenu>
             <ContextMenu Closed="ContextMenu_Closed">
                 <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_TaskManager)}" 
-                          Click="miTaskMan_Click" />
-                <Separator />
+                          Click="miTaskMan_Click" Visibility="Collapsed" />
+                <Separator Visibility="Collapsed" />
                 <MenuItem Header="{Binding Path=(l10n:DisplayString.sProgramsMenu_AddToQuickLaunch)}" 
                           Click="miPin_Click" 
-                          Name="miPin" />
-                <Separator Name="miPinSeparator" />
+                          Name="miPin" Visibility="Collapsed" />
+                <Separator Name="miPinSeparator" Visibility="Collapsed" />
                 <MenuItem Header="{Binding Path=(l10n:DisplayString.sTaskbar_Restore)}" 
                           Click="miRestore_Click" 
                           Name="miRestore">

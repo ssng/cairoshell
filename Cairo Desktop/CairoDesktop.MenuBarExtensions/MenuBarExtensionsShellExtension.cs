@@ -25,8 +25,10 @@ namespace CairoDesktop.MenuBarExtensions
             MenuExtras.AddRange(new SystemTrayMenuBarExtension(_shellManager.NotificationArea),
                                 new VolumeMenuBarExtension(),
                                 new ActionCenterMenuBarExtension(),
-                                new ClockMenuBarExtension(),
-                                new SearchMenuBarExtension(_cairoApplication));
+                                new ClockMenuBarExtension());
+                                // SSH disable search widget in menu bar
+                                //new ClockMenuBarExtension(),
+                                //new SearchMenuBarExtension(_cairoApplication));
 
             MenuExtras.AddTo(_cairoApplication.MenuBarExtensions);
         }

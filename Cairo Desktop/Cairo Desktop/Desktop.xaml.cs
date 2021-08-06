@@ -186,7 +186,8 @@ namespace CairoDesktop
             // we check source here so that we don't override the rename textbox context menu
             if (_desktopManager.DesktopLocation != null && (e.OriginalSource.GetType() == typeof(ScrollViewer) || e.Source.GetType() == typeof(Desktop) || e.Source.GetType() == typeof(Grid)))
             {
-                ShellFolderContextMenu cm = new ShellFolderContextMenu(_desktopManager.DesktopLocation, HandleFolderAction, GetFolderCommandBuilder());
+                // SSH disable desktop context menu
+                //ShellFolderContextMenu cm = new ShellFolderContextMenu(_desktopManager.DesktopLocation, HandleFolderAction, GetFolderCommandBuilder());
                 e.Handled = true;
             }
         }
@@ -692,6 +693,8 @@ namespace CairoDesktop
                 flags |= MFT.DISABLED;
             }
 
+            // SSH disable Open New Window and Add to Stacks
+            /*
             builder.AddCommand(new ShellMenuCommand
             {
                 Flags = MFT.BYCOMMAND, // enable this entry always
@@ -718,6 +721,7 @@ namespace CairoDesktop
                 });
             }
             builder.AddSeparator();
+            */
 
             builder.AddCommand(new ShellMenuCommand
             {
@@ -757,12 +761,15 @@ namespace CairoDesktop
                 });
             }
 
+            // SSH disable Personalize
+            /*
             builder.AddCommand(new ShellMenuCommand
             {
                 Flags = MFT.BYCOMMAND, // enable this entry always
                 Label = Localization.DisplayString.sDesktop_Personalize,
                 UID = (uint)CairoContextMenuItem.Personalize
             });
+            */
 
             return builder;
         }

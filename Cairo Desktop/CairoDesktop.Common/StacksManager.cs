@@ -37,7 +37,8 @@ namespace CairoDesktop.Common
 
         public StacksManager()
         {
-            initialize();
+            // SSH don't initialize stacks
+            //initialize();
         }
 
         private void initialize()

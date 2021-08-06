@@ -75,16 +75,22 @@ namespace CairoDesktop
             if (EnvironmentHelper.IsWindows10OrBetter && !EnvironmentHelper.IsAppRunningAsShell)
             {
                 // show Windows 10 features
-                miOpenUWPSettings.Visibility = Visibility.Visible;
+                // SSH not sure why this was set to Visible explicitly
+                //miOpenUWPSettings.Visibility = Visibility.Visible;
             }
 
-#if !DEBUG
+            // SSH include this always; not just !DEBUG
+//#if !DEBUG
             // I didnt like the Exit Cairo option available when Cairo was set as Shell
             if (EnvironmentHelper.IsAppRunningAsShell)
             {
                 miExitCairo.Visibility = Visibility.Collapsed;
+                // SSH also disable app grabber and cairo settings if running as shell
+                miAppGrabber.Visibility = Visibility.Collapsed;
+                //miCairoSettings.Visibility = Visibility.Collapsed;
+                miSeparatorOne.Visibility = miSeparatorTwo.Visibility = miSeparatorThree.Visibility = Visibility.Collapsed;
             }
-#endif
+//#endif
 
             // Fix for concurrent seperators
             Type previousType = null;

@@ -138,6 +138,8 @@ namespace CairoDesktop.Services
 
         private void CreateToolbar()
         {
+            // SSH disable dynamic desktop navigation
+            return;
             if (Settings.Instance.EnableDynamicDesktop && DesktopWindow != null && NavigationManager != null)
             {
                 DesktopToolbar = new DesktopNavigationToolbar(_cairoApplication, this) { Owner = DesktopWindow, NavigationManager = NavigationManager };

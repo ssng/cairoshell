@@ -175,7 +175,8 @@ namespace CairoDesktop
             ShellFile file = icon.DataContext as ShellFile;
             LastIconSelected = icon;
             
-            if (InvokeContextMenu(file, true))
+            // SSH disable desktop icon context menu
+            if (true || InvokeContextMenu(file, true))
             {
                 e.Handled = true;
             }
@@ -191,6 +192,8 @@ namespace CairoDesktop
 
             ShellMenuCommandBuilder builder = new ShellMenuCommandBuilder();
 
+            // SSH disable Open on Desktop and Add to Stacks for desktop icons
+            /*
             if (file.IsNavigableFolder)
             {
                 if (Settings.Instance.EnableDynamicDesktop)
@@ -230,6 +233,7 @@ namespace CairoDesktop
                 }
                 builder.AddSeparator();
             }
+            */
 
             return builder;
         }

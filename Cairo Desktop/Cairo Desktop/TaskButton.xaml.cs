@@ -78,8 +78,9 @@ namespace CairoDesktop
                 if (ParentTaskbar._appGrabber.QuickLaunchManager.GetQuickLaunchApplicationInfo(Window) == null)
                     vis = Visibility.Visible;
 
-                miPin.Visibility = vis;
-                miPinSeparator.Visibility = vis;
+                // SSH disable dynamic enabling of Add to QuickLaunch
+                //miPin.Visibility = vis;
+                //miPinSeparator.Visibility = vis;
 
                 // disable window operations depending on current window state. originally tried implementing via bindings but found there is no notification we get regarding maximized state
                 miMaximize.IsEnabled = (wss != NativeMethods.WindowShowStyle.ShowMaximized && (ws & (int)NativeMethods.WindowStyles.WS_MAXIMIZEBOX) != 0);
