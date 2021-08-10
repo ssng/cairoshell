@@ -892,10 +892,60 @@
                 </StackPanel>
             </TabItem>
 
+            <TabItem Header="Password">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Password" />
+                        <TextBox Name="settingsPassword"
+                                 ToolTip="Enter Settings Password">
+                            <TextBox.Text>
+                                <Binding Path="SettingsPassword"
+                                         Source="{x:Static Settings:Settings.Instance}"
+                                         UpdateSourceTrigger="PropertyChanged">
+                                </Binding>
+                            </TextBox.Text>
+                        </TextBox>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Style="{StaticResource CairoSettingsBarRestartStyle}"
+                     Name="btnAppGrabber"
+                     MouseLeftButtonUp="DoAppGrabber">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="App Grabber" />
+                    </StackPanel>
+                </TabItem.Header>
+                <TextBlock Foreground="#55FFFFFF"
+                           FontSize="14"
+                           Text="Perform App Grabber"
+                           MinWidth="300"
+                           TextAlignment="Center" />
+            </TabItem>
+
+            <TabItem Style="{StaticResource CairoSettingsBarRestartStyle}"
+                     Name="btnExit"
+                     MouseLeftButtonUp="ExitCairo">
+                <TabItem.Header>
+                    <StackPanel>
+                        <TextBlock TextAlignment="Center"
+                                   TextWrapping="Wrap"
+                                   Text="Exit Cairo" />
+                    </StackPanel>
+                </TabItem.Header>
+                <TextBlock Foreground="#55FFFFFF"
+                           FontSize="14"
+                           Text="Exit Cairo Shell"
+                           MinWidth="300"
+                           TextAlignment="Center" />
+            </TabItem>
+
             <TabItem Style="{StaticResource CairoSettingsBarRestartStyle}"
                      Name="btnRestart"
-                     MouseLeftButtonUp="RestartCairo"
-                     Visibility="Hidden">
+                     MouseLeftButtonUp="RestartCairo">
                 <TabItem.Header>
                     <StackPanel>
                         <TextBlock TextAlignment="Center"

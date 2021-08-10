@@ -69,6 +69,42 @@ namespace CairoDesktop
             checkTrayStatus();
             checkRunAtLogOn();
             checkIfCanHibernate();
+            // SSH password-protect settings menu
+            SettingsUIService.CheckPassword += OnCheckPassword;
+        }
+
+        // SSH password prompt
+        private void OnCheckPassword(object sender, String e)
+        {
+            ShowPasswordDialog();
+        }
+
+        private void ShowPasswordDialog()
+        {
+            Common.MessageControls.Password inputControl = new Common.MessageControls.Password();
+            inputControl.PasswordField.Focus();
+            //inputControl.Initialize();
+
+            CairoMessage.ShowControl("Enter Password to access Settings",
+                "Settings Menu",
+                CairoMessageImage.Default,
+                inputControl,
+                Localization.DisplayString.sInterface_Go,
+                Localization.DisplayString.sInterface_Cancel,
+                (bool? result) =>
+                {
+                    string passwordEntered = inputControl.PasswordField.Password;
+                    string passwordSet = settingsPassword.Text;
+                    if (result != true || string.IsNullOrEmpty(passwordEntered))
+                    {
+                        return; // password entry canceled
+                    }
+                    else if (passwordEntered.Equals(passwordSet))
+                    {
+                        this.Show();
+                        this.Activate();
+                    }
+                });
         }
 
         private void loadRadioGroups()
@@ -532,6 +568,34 @@ namespace CairoDesktop
             ShowRestartButton();
         }
 
+        private void DoAppGrabber(object sender, RoutedEventArgs e)
+        {
+            _appGrabber.ShowDialog();
+        }
+
+        private void ExitCairo(object sender, RoutedEventArgs e)
+        {
+            saveChanges();
+
+            CairoMessage.ShowOkCancel(Localization.DisplayString.sExitCairo_Info, Localization.DisplayString.sExitCairo_Title,
+                CairoMessageImage.Default, Localization.DisplayString.sExitCairo_ExitCairo, Localization.DisplayString.sInterface_Cancel,
+                result =>
+                {
+                    if (result == true)
+                    {
+                        if (KeyboardUtilities.IsKeyDown(System.Windows.Forms.Keys.ShiftKey))
+                        {
+                            _cairoApplication.RestartCairo();
+                        }
+                        else
+                        {
+                            _cairoApplication.ExitCairo();
+                        }
+                    }
+                });
+            //_cairoApplication.ExitCairo();
+        }
+
         private void RestartCairo(object sender, RoutedEventArgs e)
         {
             saveChanges();
@@ -548,6 +612,8 @@ namespace CairoDesktop
         {
             saveChanges();
             _uiService.SettingsUi = null;
+            // SSH password-protect settings menu
+            SettingsUIService.CheckPassword -= OnCheckPassword;
         }
 
         private void saveChanges()

@@ -1,6 +1,7 @@
 ﻿using CairoDesktop.AppGrabber;
 using CairoDesktop.Application.Interfaces;
 using CairoDesktop.Infrastructure.Services;
+using System;
 
 namespace CairoDesktop.Services
 {
@@ -13,7 +14,10 @@ namespace CairoDesktop.Services
         private readonly IApplicationUpdateService _updateService;
 
         internal SettingsUI SettingsUi;
-        
+
+        // SSH password-protect settings menu
+        public static event EventHandler<String> CheckPassword;
+
         public SettingsUIService(ICairoApplication cairoApplication, IAppGrabber appGrabber, IApplicationUpdateService updateService,
             ShellManagerService shellManager, IThemeService themeService)
         {
@@ -30,9 +34,11 @@ namespace CairoDesktop.Services
             {
                 SettingsUi = new SettingsUI(_cairoApplication, this, _shellManager, _updateService, _appGrabber, _themeService);
             }
-            
-            SettingsUi.Show();
-            SettingsUi.Activate();
+
+            // SSH password-protect settings menu
+            CheckPassword.Invoke(this, "");
+            //SettingsUi.Show();
+            //SettingsUi.Activate();
         }
 
         public void Show(string tabIdentifier)

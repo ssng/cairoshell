@@ -773,6 +773,19 @@ namespace CairoDesktop.Configuration
         }
         #endregion
 
+        // SSH password-protect settings menu
+        public string SettingsPassword
+        {
+            get
+            {
+                return cairoSettings.SettingsPassword;
+            }
+            set
+            {
+                cairoSettings.SettingsPassword = value;
+            }
+        }
+
         #region Advanced
         public string TimeFormat
         {

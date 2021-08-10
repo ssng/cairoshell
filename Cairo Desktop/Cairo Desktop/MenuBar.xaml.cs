@@ -82,7 +82,8 @@ namespace CairoDesktop
             // SSH include this always; not just !DEBUG
 //#if !DEBUG
             // I didnt like the Exit Cairo option available when Cairo was set as Shell
-            if (EnvironmentHelper.IsAppRunningAsShell)
+            // SSH disable Cairo Exit in menu
+            //if (EnvironmentHelper.IsAppRunningAsShell)
             {
                 miExitCairo.Visibility = Visibility.Collapsed;
                 // SSH also disable app grabber and cairo settings if running as shell

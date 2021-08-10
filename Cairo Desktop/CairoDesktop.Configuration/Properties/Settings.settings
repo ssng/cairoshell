@@ -152,5 +152,8 @@
     <Setting Name="ShowTaskbarBadges" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="SettingsPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sharp</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
