@@ -8,10 +8,11 @@
              DragEnter="locationDisplay_DragEnter"
              DragOver="locationDisplay_DragOver"
              Drop="locationDisplay_Drop"
-             Background="Transparent"
-             ToolTip="{Binding Path=(l10n:DisplayString.sStacks_Tooltip)}"
+             Background="Transparent">
+    <!-- SSH
+    ToolTip="{Binding Path=(l10n:DisplayString.sStacks_Tooltip)}"
              ToolTipService.ShowDuration="1000"
-             ToolTipService.InitialShowDelay="1000">
+             ToolTipService.InitialShowDelay="1000"> -->
     <DockPanel Margin="0">
         <ItemsControl ItemsSource="{Binding Path=StackLocations}">
             <ItemsControl.ItemsPanel>
