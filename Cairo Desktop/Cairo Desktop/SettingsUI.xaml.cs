@@ -555,6 +555,8 @@ namespace CairoDesktop
 
         private void ShowRestartButton()
         {
+            // SSH Never show Cairo Restart button
+            return;
             btnRestart.Visibility = Visibility.Visible;
         }
 
@@ -601,6 +603,20 @@ namespace CairoDesktop
             saveChanges();
 
             _cairoApplication.RestartCairo();
+        }
+
+        private void WindowsShutdown(object sender, RoutedEventArgs e)
+        {
+            saveChanges();
+
+            SystemPower.ShowShutdownConfirmation();
+        }
+
+        private void WindowsRestart(object sender, RoutedEventArgs e)
+        {
+            saveChanges();
+
+            SystemPower.ShowRebootConfirmation();
         }
 
         /// <summary>

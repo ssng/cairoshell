@@ -909,43 +909,96 @@
                 </StackPanel>
             </TabItem>
 
-            <TabItem Style="{StaticResource CairoSettingsBarRestartStyle}"
-                     Name="btnAppGrabber"
-                     MouseLeftButtonUp="DoAppGrabber">
-                <TabItem.Header>
-                    <StackPanel>
-                        <TextBlock TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="App Grabber" />
-                    </StackPanel>
-                </TabItem.Header>
-                <TextBlock Foreground="#55FFFFFF"
-                           FontSize="14"
-                           Text="Perform App Grabber"
-                           MinWidth="300"
-                           TextAlignment="Center" />
-            </TabItem>
-
-            <TabItem Style="{StaticResource CairoSettingsBarRestartStyle}"
-                     Name="btnExit"
-                     MouseLeftButtonUp="ExitCairo">
-                <TabItem.Header>
-                    <StackPanel>
-                        <TextBlock TextAlignment="Center"
-                                   TextWrapping="Wrap"
-                                   Text="Exit Cairo" />
-                    </StackPanel>
-                </TabItem.Header>
-                <TextBlock Foreground="#55FFFFFF"
-                           FontSize="14"
-                           Text="Exit Cairo Shell"
-                           MinWidth="300"
-                           TextAlignment="Center" />
+            <TabItem Header="Admin">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Programs Menu"
+                               Style="{StaticResource SettingGroupHeader}" />
+                    <DockPanel>
+                        <TextBlock Text="Configure Applications in Programs menu:" />
+                        <Button Height="24"
+                                Padding="10,0"
+                                Margin="5,4"
+                                Name="btnAdminAppGrabber"
+                                Click="DoAppGrabber" HorizontalAlignment="Right">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Content"
+                                            Value="App Grabber" />
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </DockPanel>
+                    <TextBlock Text="Cairo Exit/Restart"
+                               Style="{StaticResource SettingGroupHeader}" />
+                    <DockPanel>
+                        <TextBlock Text="Save Settings and Exit Cairo:" />
+                        <Button Height="24"
+                                Padding="10,0"
+                                Margin="5,4"
+                                Name="btnAdminExitCairo"
+                                Click="ExitCairo" Content="Cairo Exit" HorizontalAlignment="Right">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Content"
+                                            Value="Exit Cairo" />
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Save Settings and Restart Cairo:" />
+                        <Button Height="24"
+                                Padding="10,0"
+                                Margin="5,4"
+                                HorizontalAlignment="Right"
+                                Name="btnAdminRestartCairo"
+                                Click="RestartCairo" Content="Cairo Restart">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Content"
+                                            Value="Restart Cairo" />
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </DockPanel>
+                    <TextBlock Text="Windows Shutdown/Restart"
+                               Style="{StaticResource SettingGroupHeader}" />
+                    <DockPanel>
+                        <TextBlock Text="Perform Windows Shutdown:" />
+                        <Button Height="24"
+                                Padding="10,0"
+                                Margin="5,4"
+                                Name="btnAdminWindowsShutdown"
+                                Click="WindowsShutdown" HorizontalAlignment="Right">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Content"
+                                            Value="Windows Shutdown" />
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </DockPanel>
+                    <DockPanel>
+                        <TextBlock Text="Perform Windows Restart:" />
+                        <Button Height="24"
+                                Padding="10,0"
+                                Margin="5,4"
+                                Name="btnAdminWindowsRestart"
+                                Click="WindowsRestart" HorizontalAlignment="Right">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Content"
+                                            Value="Windows Restart" />
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </DockPanel>
+                </StackPanel>
             </TabItem>
 
             <TabItem Style="{StaticResource CairoSettingsBarRestartStyle}"
                      Name="btnRestart"
-                     MouseLeftButtonUp="RestartCairo">
+                     MouseLeftButtonUp="RestartCairo" Visibility="Collapsed">
                 <TabItem.Header>
                     <StackPanel>
                         <TextBlock TextAlignment="Center"

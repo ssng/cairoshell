@@ -44,7 +44,7 @@
                     <Separator Visibility="Collapsed" />
                     <MenuItem x:Name="miAppGrabber" Header="{Binding Path=(l10n:DisplayString.sAppGrabber)}"
                               Click="InitAppGrabberWindow" Visibility="Collapsed" />
-                    <MenuItem x:Name="miCairoSettings" Header="{Binding Path=(l10n:DisplayString.sCairoMenu_CairoSettings)}"
+                    <MenuItem x:Name="miCairoSettings" Header="Settings"
                               Click="InitCairoSettingsWindow" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_WindowsControlPanel)}"
                               Click="OpenControlPanel" Visibility="Collapsed" />
@@ -70,9 +70,9 @@
                               Click="SysHibernate"
                               Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_Restart)}"
-                              Click="OpenRebootBox" />
+                              Click="OpenRebootBox" Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_ShutDown)}"
-                              Click="OpenShutDownBox" />
+                              Click="OpenShutDownBox" Visibility="Collapsed" />
                     <Separator Visibility="Collapsed" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_Lock)}"
                               Click="SysLock" Visibility="Collapsed" />
