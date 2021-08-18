@@ -131,7 +131,9 @@ namespace CairoDesktop
             }
 
             // show task view on windows >= 10, adjust margin if not shown
-            if (EnvironmentHelper.IsWindows10OrBetter && !EnvironmentHelper.IsAppRunningAsShell)
+            // SSH disable Task View on taskbar
+            //if (EnvironmentHelper.IsWindows10OrBetter && !EnvironmentHelper.IsAppRunningAsShell)
+            if (false)
                 bdrTaskView.Visibility = Visibility.Visible;
             else
                 TasksList2.Margin = new Thickness(0, -3, 0, -3);
