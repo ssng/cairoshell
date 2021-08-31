@@ -21,7 +21,8 @@ namespace CairoDesktop.AppGrabber {
             if (firstStart)
             {
                 Add(new Category("Uncategorized", false, AppCategoryType.Uncategorized));
-                Add(new Category("Quick Launch", false, AppCategoryType.QuickLaunch));
+                // SSH disable quick launch
+                //Add(new Category("Quick Launch", false, AppCategoryType.QuickLaunch));
             }
         }
 
@@ -63,9 +64,10 @@ namespace CairoDesktop.AppGrabber {
                     Add(cat);
                     return cat;
                 case AppCategoryType.QuickLaunch:
-                    cat = new Category("Quick Launch", true, AppCategoryType.QuickLaunch);
-                    Add(cat);
-                    return cat;
+                    // SSH disable quick launch
+                    //cat = new Category("Quick Launch", true, AppCategoryType.QuickLaunch);
+                    //Add(cat);
+                    //return cat;
                 default:
                     return null;
             }

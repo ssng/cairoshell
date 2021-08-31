@@ -15,7 +15,7 @@
     <RootNamespace>CairoDesktop</RootNamespace>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <AssemblyName>CairoDesktop</AssemblyName>
+    <AssemblyName>SynappxShell</AssemblyName>
     <AssemblyTitle>Cairo Desktop Environment</AssemblyTitle>
     <Company>Cairo Development Team</Company>
     <Authors>Cairo Development Team</Authors>

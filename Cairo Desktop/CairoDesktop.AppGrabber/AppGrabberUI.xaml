@@ -138,7 +138,7 @@
                     <TextBlock Style="{StaticResource AppGrabberSubText}" Text="{Binding sAppGrabber_Page2Directions3}" />
                     <TextBlock Style="{StaticResource AppGrabberSubText}" Text="{Binding sAppGrabber_Page2Directions4}" />
                     <TextBlock Style="{StaticResource AppGrabberSubText}" Text="{Binding sAppGrabber_Page2Directions5}" />
-                    <TextBlock Style="{StaticResource AppGrabberSubText}" Margin="0" Text="{Binding sAppGrabber_Page2Directions6}" />
+                    <TextBlock Style="{StaticResource AppGrabberSubText}" Margin="0" Text="{Binding sAppGrabber_Page2Directions6}" Visibility="Collapsed" />
                 </StackPanel>
                 <Border BorderThickness="1"
                 BorderBrush="#FF888888"

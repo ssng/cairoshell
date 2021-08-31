@@ -86,7 +86,9 @@ namespace CairoDesktop
         private void btnGoPage3_Click(object sender, RoutedEventArgs e)
         {
             bdrMenuBar.Visibility = Visibility.Collapsed;
-            bdrDesktop.Visibility = Visibility.Visible;
+            // SSH skip dynamic desktop tour and proceed directly to taskbar tour page
+            //bdrDesktop.Visibility = Visibility.Visible;
+            bdrTaskbar.Visibility = Visibility.Visible;
         }
 
         private void btnGoPage4_Click(object sender, RoutedEventArgs e)

@@ -931,12 +931,12 @@
                     <TextBlock Text="Cairo Exit/Restart"
                                Style="{StaticResource SettingGroupHeader}" />
                     <DockPanel>
-                        <TextBlock Text="Save Settings and Exit Cairo:" />
+                        <TextBlock Text="Save Settings and Exit Synappx Shell:" />
                         <Button Height="24"
                                 Padding="10,0"
                                 Margin="5,4"
                                 Name="btnAdminExitCairo"
-                                Click="ExitCairo" Content="Cairo Exit" HorizontalAlignment="Right">
+                                Click="ExitCairo" Content="Synappx Shell Exit" HorizontalAlignment="Right">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Content"
@@ -946,13 +946,13 @@
                         </Button>
                     </DockPanel>
                     <DockPanel>
-                        <TextBlock Text="Save Settings and Restart Cairo:" />
+                        <TextBlock Text="Save Settings and Restart Synappx Shell:" />
                         <Button Height="24"
                                 Padding="10,0"
                                 Margin="5,4"
                                 HorizontalAlignment="Right"
                                 Name="btnAdminRestartCairo"
-                                Click="RestartCairo" Content="Cairo Restart">
+                                Click="RestartCairo" Content="Synappx Shell Restart">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Content"
