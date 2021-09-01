@@ -213,7 +213,7 @@ namespace CairoDesktop
             {
                 // run the program again
                 Process current = new Process();
-                current.StartInfo.FileName = AppDomain.CurrentDomain.BaseDirectory + "CairoDesktop.exe";
+                current.StartInfo.FileName = AppDomain.CurrentDomain.BaseDirectory + "SynappxShell.exe";    // SSH new exe name
                 current.StartInfo.Arguments = "/restart=true";
                 current.Start();
 

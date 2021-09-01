@@ -44,7 +44,7 @@
                     <Separator Visibility="Collapsed" />
                     <MenuItem x:Name="miAppGrabber" Header="{Binding Path=(l10n:DisplayString.sAppGrabber)}"
                               Click="InitAppGrabberWindow" Visibility="Collapsed" />
-                    <MenuItem x:Name="miCairoSettings" Header="Settings"
+                    <MenuItem x:Name="miCairoSettings" Header="{Binding Path=(l10n:DisplayString.sCairoMenu_CairoSettings)}"
                               Click="InitCairoSettingsWindow" />
                     <MenuItem Header="{Binding Path=(l10n:DisplayString.sCairoMenu_WindowsControlPanel)}"
                               Click="OpenControlPanel" Visibility="Collapsed" />

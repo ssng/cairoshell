@@ -424,6 +424,25 @@ namespace CairoDesktop.Localization
 
         public static string sSettings_Advanced => getString();
 
+        // SSH custom strings
+        public static string sSettings_Password => getString();
+        public static string sSettings_Password_PasswordTooltip => getString();
+        public static string sSettings_Admin => getString();
+        public static string sSettings_Admin_ProgramsMenu => getString();
+        public static string sSettings_Admin_ConfigurePrograms => getString();
+        public static string sSettings_Admin_AppGrabber => getString();
+        public static string sSettings_Admin_CairoExitRestart => getString();
+        public static string sSettings_Admin_CairoExit => getString();
+        public static string sSettings_Admin_CairoExitButton => getString();
+        public static string sSettings_Admin_CairoRestart => getString();
+        public static string sSettings_Admin_CairoRestartButton => getString();
+        public static string sSettings_Admin_WindowsMenu => getString();
+        public static string sSettings_Admin_WindowsShutdown => getString();
+        public static string sSettings_Admin_WindowsShutdownButton => getString();
+        public static string sSettings_Admin_WindowsRestart => getString();
+        public static string sSettings_Admin_WindowsRestartButton => getString();
+        public static string sSettings_PasswordDialog => getString();
+
         public static string sSettings_Behavior => getString();
 
         public static string sSettings_Default => getString();

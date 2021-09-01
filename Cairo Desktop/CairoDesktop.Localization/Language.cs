@@ -169,6 +169,23 @@ namespace CairoDesktop.Localization
             { "sSettings_Taskbar", "Taskbar" },
             { "sSettings_Appearance", "Appearance" },
             { "sSettings_Advanced", "Advanced" },
+            { "sSettings_Password", "Password" },   // SSH custom strings
+            { "sSettings_Password_PasswordTooltip", "Enter Settings Password" },   // SSH custom strings
+            { "sSettings_Admin", "Admin" },   // SSH custom strings
+            { "sSettings_Admin_ProgramsMenu", "Programs Menu" },   // SSH custom strings
+            { "sSettings_Admin_ConfigurePrograms", "Configure Applications in Programs menu:" },   // SSH custom strings
+            { "sSettings_Admin_AppGrabber", "App Grabber" },   // SSH custom strings
+            { "sSettings_Admin_CairoExitRestart", "Synappx Shell Exit/Restart" },   // SSH custom strings
+            { "sSettings_Admin_CairoExit", "Save Settings and Exit Synappx Shell:" },   // SSH custom strings
+            { "sSettings_Admin_CairoExitButton", "Exit Synappx Shell" },   // SSH custom strings
+            { "sSettings_Admin_CairoRestart", "Save Settings and Restart Synappx Shell:" },   // SSH custom strings
+            { "sSettings_Admin_CairoRestartButton", "Restart Synappx Shell" },   // SSH custom strings
+            { "sSettings_Admin_WindowsMenu", "Windows Shutdown/Restart" },   // SSH custom strings
+            { "sSettings_Admin_WindowsShutdown", "Perform Windows Shutdown:" },   // SSH custom strings
+            { "sSettings_Admin_WindowsShutdownButton", "Windows Shutdown" },   // SSH custom strings
+            { "sSettings_Admin_WindowsRestart", "Perform Windows Restart:" },   // SSH custom strings
+            { "sSettings_Admin_WindowsRestartButton", "Windows Restart" },   // SSH custom strings
+            { "sSettings_PasswordDialog", "Enter Password to access Settings" },   // SSH custom strings
             { "sSettings_Behavior", "Behavior" },
             { "sSettings_Default", "Default" },
             { "sSettings_RestartCairo", "Restart Cairo to apply" },

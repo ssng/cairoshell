@@ -892,12 +892,12 @@
                 </StackPanel>
             </TabItem>
 
-            <TabItem Header="Password">
+            <TabItem Header="{Binding Path=(l10n:DisplayString.sSettings_Password)}">
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="Password" />
+                        <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Password)}" />
                         <TextBox Name="settingsPassword"
-                                 ToolTip="Enter Settings Password">
+                                 ToolTip="{Binding Path=(l10n:DisplayString.sSettings_Password_PasswordTooltip)}">
                             <TextBox.Text>
                                 <Binding Path="SettingsPassword"
                                          Source="{x:Static Settings:Settings.Instance}"
@@ -909,12 +909,12 @@
                 </StackPanel>
             </TabItem>
 
-            <TabItem Header="Admin">
+            <TabItem Header="{Binding Path=(l10n:DisplayString.sSettings_Admin)}">
                 <StackPanel Orientation="Vertical">
-                    <TextBlock Text="Programs Menu"
+                    <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Admin_ProgramsMenu)}"
                                Style="{StaticResource SettingGroupHeader}" />
                     <DockPanel>
-                        <TextBlock Text="Configure Applications in Programs menu:" />
+                        <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Admin_ConfigurePrograms)}" />
                         <Button Height="24"
                                 Padding="10,0"
                                 Margin="5,4"
@@ -923,20 +923,20 @@
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Content"
-                                            Value="App Grabber" />
+                                            Value="{Binding Path=(l10n:DisplayString.sSettings_Admin_AppGrabber)}" />
                                 </Style>
                             </Button.Style>
                         </Button>
                     </DockPanel>
-                    <TextBlock Text="Cairo Exit/Restart"
+                    <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Admin_CairoExitRestart)}"
                                Style="{StaticResource SettingGroupHeader}" />
                     <DockPanel>
-                        <TextBlock Text="Save Settings and Exit Synappx Shell:" />
+                        <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Admin_CairoExit)}" />
                         <Button Height="24"
                                 Padding="10,0"
                                 Margin="5,4"
                                 Name="btnAdminExitCairo"
-                                Click="ExitCairo" Content="Synappx Shell Exit" HorizontalAlignment="Right">
+                                Click="ExitCairo" Content="{Binding Path=(l10n:DisplayString.sSettings_Admin_CairoExitButton)}" HorizontalAlignment="Right">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Content"
@@ -946,13 +946,13 @@
                         </Button>
                     </DockPanel>
                     <DockPanel>
-                        <TextBlock Text="Save Settings and Restart Synappx Shell:" />
+                        <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Admin_CairoRestart)}" />
                         <Button Height="24"
                                 Padding="10,0"
                                 Margin="5,4"
                                 HorizontalAlignment="Right"
                                 Name="btnAdminRestartCairo"
-                                Click="RestartCairo" Content="Synappx Shell Restart">
+                                Click="RestartCairo" Content="{Binding Path=(l10n:DisplayString.sSettings_Admin_CairoRestartButton)}">
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Content"
@@ -961,10 +961,10 @@
                             </Button.Style>
                         </Button>
                     </DockPanel>
-                    <TextBlock Text="Windows Shutdown/Restart"
+                    <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Admin_WindowsMenu)}"
                                Style="{StaticResource SettingGroupHeader}" />
                     <DockPanel>
-                        <TextBlock Text="Perform Windows Shutdown:" />
+                        <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Admin_WindowsShutdown)}" />
                         <Button Height="24"
                                 Padding="10,0"
                                 Margin="5,4"
@@ -973,13 +973,13 @@
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Content"
-                                            Value="Windows Shutdown" />
+                                            Value="{Binding Path=(l10n:DisplayString.sSettings_Admin_WindowsShutdownButton)}" />
                                 </Style>
                             </Button.Style>
                         </Button>
                     </DockPanel>
                     <DockPanel>
-                        <TextBlock Text="Perform Windows Restart:" />
+                        <TextBlock Text="{Binding Path=(l10n:DisplayString.sSettings_Admin_WindowsRestart)}" />
                         <Button Height="24"
                                 Padding="10,0"
                                 Margin="5,4"
@@ -988,7 +988,7 @@
                             <Button.Style>
                                 <Style TargetType="Button">
                                     <Setter Property="Content"
-                                            Value="Windows Restart" />
+                                            Value="{Binding Path=(l10n:DisplayString.sSettings_Admin_WindowsRestartButton)}" />
                                 </Style>
                             </Button.Style>
                         </Button>

@@ -85,8 +85,8 @@ namespace CairoDesktop
             inputControl.PasswordField.Focus();
             //inputControl.Initialize();
 
-            CairoMessage.ShowControl("Enter Password to access Settings",
-                "Settings Menu",
+            CairoMessage.ShowControl(Localization.DisplayString.sSettings_PasswordDialog,
+                Localization.DisplayString.sCairoMenu_CairoSettings,
                 CairoMessageImage.Default,
                 inputControl,
                 Localization.DisplayString.sInterface_Go,
