@@ -21,7 +21,8 @@
         MouseRightButtonUp="CairoDesktopWindow_MouseRightButtonUp"
         DragOver="CairoDesktopWindow_DragOver"
         Drop="CairoDesktopWindow_Drop"
-        AllowDrop="True">
+        AllowDrop="True"
+        Stylus.IsPressAndHoldEnabled="False">
     <Grid Name="grid" 
           PreviewMouseLeftButtonDown="grid_PreviewMouseLeftButtonDown" 
           HorizontalAlignment="Left" 
